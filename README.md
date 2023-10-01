@@ -23,7 +23,6 @@ Are you eager to dive into the world of open source and contribute to meaningful
 Whether you're a coder, designer, or documentation enthusiast, there's a place for you here. Join us in making a positive impact on the open source community while having fun along the way!
 
 
-
 ## Code of Conduct
 
 We have a Code of Conduct that all contributors are expected to follow. It ensures a safe and welcoming environment for everyone. Well, that simply is don't spam and please maintain the decorum.
@@ -31,3 +30,4 @@ We have a Code of Conduct that all contributors are expected to follow. It ensur
 Let's make Hacktoberfest 2023 a memorable learning experience. Happy coding! 🚀
 
 **Note:** Please check the official Hacktoberfest website for guidelines and eligibility criteria. We are here to support you throughout your journey.
+<h1>Kindly give us a "⭐️" if you find this repo useful.
