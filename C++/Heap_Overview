@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int>v1={10,20,30,40,34,23,50};
+    make_heap(v1.begin(),v1.end());           //to make heap
+    cout<<"MAXIMUM ELEMENT OF HEAP IS ";
+    cout<<v1.front()<<endl;                      //in heap first element is always the largest one
+ 
+    v1.push_back(23);   
+    push_heap(v1.begin(),v1.end());                //to reorder the  heap
+    cout<<v1.front()<<endl;                    
+    
+    pop_heap(v1.begin(),v1.end());
+    v1.pop_back();
+
+    cout<<"The maximum element of heap is : ";
+    cout<<v1.front();
+}
