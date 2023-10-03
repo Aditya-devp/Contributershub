@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"ENTER THE NO. "<<endl;
+    cin>>n;
+    string res="";
+    string s[]={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+    int a[]={1000,900,500,400,100,90,50,40,10,9,5,4,1};
+    for(int x=0;x<13;x++)
+    {
+    while(n-a[x]>=0)
+    {
+        res+=s[x];
+        n-=a[x];
+    }}
+    cout<<"the roman form of entered no. "<< n<<" is "<<res<<endl;
+}
