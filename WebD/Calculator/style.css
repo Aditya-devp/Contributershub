@@ -1,0 +1,142 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    min-height: 100vh;
+    background-image: url("images/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:2vmin;
+}
+
+.container {
+    position: relative;
+    min-width: 30vmin;
+    min-height: 40vmin;
+    /* background: #333; */
+    padding: 6vmin 5vmin 3vmin;
+    border-radius: 30px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+        10px 10px 70px rgba(0, 0, 0, 0.25),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.calculator {
+    position: relative;
+    display: grid;
+}
+
+.calculator .value {
+    position: relative;
+    grid-column: span 4;
+    height: 16vmin;
+    left: 8px;
+    width: 53vmin;
+    border: none;
+    outline: none;
+    background: #a7af7c;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 6vmin;
+}
+
+.calculator span {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 10.5vmin;
+    height: 10.5vmin;
+    margin: 1.5vmin;
+    /* background: linear-gradient(180deg, #2f2f2f, #3f3f3f); */
+    box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.4),
+        0 0 0 2px rgba(0, 0, 0, 0.75),
+        inset -8px 0 8px rgba(206, 105, 32, 0.559),
+        inset 0 -8px 8px rgba(45, 115, 65, 0.712);
+    color: rgb(6, 54, 83);
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.calculator span::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    /* background: linear-gradient(90deg, #2d2d2d, #4d4d4d); */
+    border-radius: 10px;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1),
+        10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
+
+.calculator span:active {
+    filter: brightness(1.5);
+}
+
+.calculator span i {
+    position: relative;
+    font-style: normal;
+    font-size:3.5vmin;
+    text-transform: uppercase;
+}
+
+.calculator .clear {
+    grid-column: span 2;
+    width: 25.5vmin;
+    background: #f00;
+}
+
+.calculator .clear::before {
+    background: linear-gradient(90deg, #d20000, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+.calculator .plus {
+    grid-row: span 2;
+    height:24.5vmin;
+}
+
+.calculator .equal {
+    background: #2196f3
+}
+
+.calculator .equal::before {
+    background: linear-gradient(90deg, #1479c9, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+#developer{
+    color: #197e4c;
+    margin-top: 6vmin;
+    margin-right: 4vmin;
+    padding-bottom: 4vmin;
+    font-family: 'Yeon Sung';
+
+}
+#link{
+    text-decoration: none;
+}
