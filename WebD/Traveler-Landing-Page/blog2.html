@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Blog Page</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+header {
+    height: 100vh;
+    background-image: url(image/header-bg.png);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+
+}
+ 
+.header ul {
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+} */
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	margin: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+section {
+	flex-basis: 48%;
+	margin-bottom: 20px;
+}
+
+section h2 {
+	margin-top: 0;
+}
+
+section img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+button {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+</style>
+<body>
+	<header>
+		<nav>
+			<ul>
+                <h1>My Blog Page</h1><br>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		
+	</header>
+
+	<main>
+		<section>
+			<h2>Blog Post Title 1</h2>
+			<img src="image2.jpg" alt="Blog Post Image 1">
+			<p>Blog post content goes here.</p>
+			<button>Read More</button>
+		</section>
+		
+		<section>
+			<h2>Blog Post Title 2</h2>
+			<img src="image2.jpg" alt="Blog Post Image 2">
+			<p>Blog post content goes here.</p>
+			<button>Read More</button>
+		</section>
+	</main>
+	
+	<footer>
+		<p>&copy; 2023 My Blog Page</p>
+	</footer>
+
+	<script > 
+    
+    // Add click event listener to all read more buttons
+const readMoreBtns = document.querySelectorAll('button');
+
+for (let i = 0; i < readMoreBtns.length; i++) {
+  readMoreBtns[i].addEventListener('click', () => {
+    alert('Read more button clicked!');
+  });
+}
+
+    
+    </script>
+</body>
+</html>
