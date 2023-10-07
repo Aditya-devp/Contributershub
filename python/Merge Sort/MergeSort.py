@@ -1,8 +1,3 @@
-import sys
-import concurrent.futures
-
-sys.setrecursionlimit(1000000000)
-
 def mergeSort(myList):
     if len(myList) > 1:
         mid = len(myList) // 2
@@ -35,3 +30,15 @@ def mergeSort(myList):
             myList[k]=right[j]
             j += 1
             k += 1
+
+#input from user
+data = [int(x) for x in input("Enter numbers separated by spaces: ").split()]
+print("Unsorted Array")
+print(data)
+
+size = len(data)
+
+quickSort(data, 0, size - 1)
+
+print('Sorted Array in Ascending Order:')
+print(data)
