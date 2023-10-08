@@ -1,0 +1,27 @@
+.game {
+  padding-left: 25%;
+  padding-top: 5%;
+  background-color: rgb(72, 46, 13);
+  padding-bottom: 5%;
+}
+
+.navbar {
+  background-color: rgb(92, 201, 88);
+  color: rgb(72, 46, 13);
+}
+
+.footer {
+  text-align: center;
+  padding: 3%;
+  background-color: rgb(72, 46, 13);
+  color: white;
+}
+
+.controls {
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: rgb(92, 201, 88);
+  color: rgb(72, 46, 13);
+  line-height: 2;
+}
