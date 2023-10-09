@@ -1,0 +1,72 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+// Define a class named Solution
+class Solution
+{
+public:
+  // Member function to find the length of the longest valid parentheses substring
+  int longestValidParentheses(string s)
+  {
+    // Create a stack to keep track of indices of opening parentheses
+    stack<int> st;
+    // Initialize the stack with -1 to handle edge cases
+    st.push(-1);
+    // Initialize the maximum length of valid parentheses substring
+    int maxLen = 0;
+
+    // Iterate through the characters of the input string
+    for (int i = 0; i < s.length(); i++)
+    {
+      char ch = s[i];
+
+      if (ch == '(')
+      {
+        // Push the index of an opening parenthesis onto the stack
+        st.push(i);
+      }
+      else
+      {
+        // Pop the top of the stack when a closing parenthesis is encountered
+        st.pop();
+
+        // If the stack becomes empty, push the current index onto it
+        if (st.empty())
+        {
+          st.push(i);
+        }
+        else
+        {
+          // Calculate the length of the valid parentheses substring
+          int len = i - st.top();
+          // Update the maximum length if necessary
+          maxLen = max(len, maxLen);
+        }
+      }
+    }
+    // Return the maximum length of valid parentheses substring found
+    return maxLen;
+  }
+};
+
+// Main function to test the Solution class
+int main()
+{
+  // Create an instance of the Solution class
+  Solution solution;
+  string input;
+
+  // Prompt the user to enter a string containing parentheses
+  cout << "Enter a string containing parentheses: ";
+  cin >> input;
+
+  // Call the longestValidParentheses function to find the result
+  int result = solution.longestValidParentheses(input);
+
+  // Display the result
+  cout << "Length of the longest valid parentheses substring: " << result << endl;
+
+  // Return 0 to indicate successful program execution
+  return 0;
+}

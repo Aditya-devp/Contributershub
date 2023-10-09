@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <title>Write</title>
+</head>
+<style>
+  /* Write page */
+
+.write {
+    width: 85%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  .writeImg {
+    margin:auto;
+    width:100%;
+    height: 45vmin;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .writeImg img:hover{
+    transform: none;
+  }
+  
+  .writeForm {
+    position: relative;
+  }
+  
+  .writeFormGroup {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .writeIcon {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: rgb(129, 125, 125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .writeInput {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+  }
+  
+  .writeInput::placeholder {
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+  }
+  
+  .writeInput:focus {
+    outline-style: none;
+  }
+  
+  .writeText {
+    width: 80vw;
+    height: 100vh;
+    font-family: inherit;
+    font-size: 20px;
+  }
+  
+  .writeSubmit {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: #fc036b;
+    padding: 10px;
+    border:1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .writeSubmit:hover{
+    background: whitesmoke;
+    color: #fc036b;
+    box-shadow: 7px 9px 5px black;
+  }
+  
+
+</style>
+<body>
+    <div class="write">
+        <img
+          class="writeImg"
+          src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          alt="">
+    </img>
+        <form class="writeForm">
+          <div class="writeFormGroup">
+            <label htmlFor="fileInput">
+              <!-- <i class="writeIcon fas fa-plus"></i> -->
+            </label>
+            <input id="fileInput" type="file"/>
+            <input
+              class="writeInput"
+              placeholder="Title"
+              type="text"
+              autoFocus={true}
+            />
+          </div>
+          <div class="writeFormGroup">
+            <textarea
+              class="writeInput writeText"
+              placeholder="Write your artical here..."
+              type="text"
+              autoFocus={true}  ></textarea>
+            
+          </div>
+          <button class="writeSubmit" type="submit">
+            Publish
+          </button>
+        </form>
+      </div>
+</body>
+</html>
