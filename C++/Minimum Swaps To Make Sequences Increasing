@@ -1,0 +1,80 @@
+class Solution {
+public:
+    int solverec(vector<int>& nums1, vector<int>& nums2,int index, bool swapped){
+        if(index == nums1.size())
+        return 0;
+
+        int ans = INT_MAX;
+
+        int prev1 = nums1[index-1];
+        int prev2 = nums2[index-1];
+
+        // catch point
+        if(swapped)
+        swap(prev1, prev2);
+
+        // non swap
+        if(nums1[index] > prev1 && nums2[index] > prev2)
+        ans =  solverec(nums1,nums2,index+1,0);
+
+        // for swap call
+        if(nums1[index] > prev2 && nums2[index] > prev1)
+        ans =  min(ans , 1 + solverec(nums1,nums2,index+1,1));
+
+        return ans;
+    }
+        int solvememo(vector<int>& nums1, vector<int>& nums2,int index, bool swapped, vector<vector<int> >& dp){
+        if(index == nums1.size())
+        return 0;
+
+        if(dp[index][swapped] != -1)
+        return dp[index][swapped];
+
+        int ans = INT_MAX;
+
+        int prev1 = nums1[index-1];
+        int prev2 = nums2[index-1];
+
+        // catch point
+        if(swapped)
+        swap(prev1, prev2);
+
+        // non swap
+        if(nums1[index] > prev1 && nums2[index] > prev2)
+        ans =  solvememo(nums1,nums2,index+1,0,dp);
+
+        // for swap call
+        if(nums1[index] > prev2 && nums2[index] > prev1)
+        ans =  min(ans , 1 + solvememo(nums1,nums2,index+1,1,dp));
+
+        dp[index][swapped] = ans;
+        return dp[index][swapped];
+    }
+
+ 
+
+    int minSwap(vector<int>& nums1, vector<int>& nums2) {
+        nums1.insert(nums1.begin(),-1);
+        nums2.insert(nums2.begin(),-1);
+        bool swapped = 0;
+        // int final = solverec(nums1, nums2, 1, swapped);
+        // return final;
+
+        vector<vector<int> >dp(nums1.size(), vector<int>(2, -1));
+        int final = solvememo(nums1, nums2, 1, swapped,dp);
+        return final;
+
+    }
+};
+
+int main() {
+    vector<int> nums1 = {1, 3, 5, 4, 2};
+    vector<int> nums2 = {4, 2, 3, 1, 5};
+
+    Solution obj;
+    int min_swaps = obj.minSwap(nums1, nums2);
+
+    cout << "The minimum number of swaps required is: " << min_swaps << endl;
+
+    return 0;
+}
