@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pomodoro Timer</title>
+</head>
+<body>
+  <h1>Pomodoro Timer</h1>
+  <p id="timer">25:00</p>
+  <p id="status">Ready to work</p>
+  <button id="startButton">Start</button>
+  <button id="resetButton">Reset</button>
+
+  <script>
+    let isWorking = true;
+    let timer;
+
+    const workDurationMillis = 25 * 60 * 1000; // 25 minutes in milliseconds
+    const breakDurationMillis = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+    const timerElement = document.getElementById('timer');
+    const statusElement = document.getElementById('status');
+    const startButton = document.getElementById('startButton');
+    const resetButton = document.getElementById('resetButton');
+
+    startButton.addEventListener('click', () => {
+      if (isWorking) {
+        startTimer(workDurationMillis);
+        isWorking = false;
+        statusElement.textContent = "Work in progress";
+      } else {
+        startTimer(breakDurationMillis);
+        isWorking = true;
+        statusElement.textContent = "Take a break";
+      }
+    });
+
+    resetButton.addEventListener('click', () => {
+      clearInterval(timer);
+      setTimerText(workDurationMillis);
+      isWorking = true;
+      statusElement.textContent = "Ready to work";
+    });
+
+    function startTimer(duration) {
+      let startTime = Date.now();
+      clearInterval(timer);
+
+      timer = setInterval(function () {
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - startTime;
+        const remainingTime = duration - elapsedTime;
+        if (remainingTime <= 0) {
+          clearInterval(timer);
+          if (isWorking) {
+            statusElement.textContent = "Work session finished";
+          } else {
+            statusElement.textContent = "Break finished";
+          }
+        }
+        setTimerText(remainingTime);
+      }, 1000);
+    }
+
+    function setTimerText(remainingTime) {
+      const minutes = Math.floor(remainingTime / 60000);
+      const seconds = Math.floor((remainingTime % 60000) / 1000);
+      timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    setTimerText(workDurationMillis);
+  </script>
+</body>
+</html>
