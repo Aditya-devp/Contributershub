@@ -1,0 +1,57 @@
+  |   |   | 
+  |   |   | 
+  |   |   | 
+X enter coordinates : 0 0
+
+X |   |   | 
+  |   |   | 
+  |   |   | 
+O enter coordinates : 0 1
+
+X | O |   | 
+  |   |   | 
+  |   |   | 
+X enter coordinates : 1 1
+
+X | O |   | 
+  | X |   | 
+  |   |   | 
+O enter coordinates : 2 2
+
+X | O |   | 
+  | X |   | 
+  |   | O | 
+X enter coordinates : 2 0
+
+X | O |   | 
+  | X |   | 
+X |   | O | 
+O enter coordinates : 1 0
+
+X | O |   | 
+O | X |   | 
+X |   | O | 
+X enter coordinates : 5 5
+
+invalid move, try again
+X | O |   | 
+O | X |   | 
+X |   | O | 
+X enter coordinates : 1 2
+
+X | O |   | 
+O | X | X | 
+X |   | O | 
+O enter coordinates : 2 1
+
+X | O |   | 
+O | X | X | 
+X | O | O | 
+X enter coordinates : 0 2
+
+congratulations X you won
+X | O | X | 
+O | X | X | 
+X | O | O | 
+
+Process finished with exit code 0
