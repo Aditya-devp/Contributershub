@@ -1,8 +1,13 @@
 from pytube import YouTube
 
-link="https://youtu.be/2lAe1cqCOXo"      #YouTube video link to download
-yt=YouTube(link, use_oauth=True, allow_oauth_cache=True)
-print("Title",yt.title) 
-yd=yt.streams.get_highest_resolution()
-yd.download(r'C:\\Users\\Lenovo\\Desktop\\New folder')      #path of the folder where video has to be downloaded
-print("Video Downloaded")
+
+def download_youtube_video(link: str, directory: str):
+  yt = YouTube(link, use_oauth=True, allow_oauth_cache=True)
+  yd=yt.streams.get_highest_resolution()
+  yd.download(directory)      
+
+if __name__ == '__main__':
+  link = input("Enter youtube video link: ")
+  directory = input("Enter the directory where you want to save the video: ")
+  download_youtube_video(link, directory)
+  print(f"The video has been saved to {directory}")
