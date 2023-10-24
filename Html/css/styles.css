@@ -139,7 +139,11 @@ footer {
     background:#143774;
     color: white;
     text-align: center;
-    padding: 3em 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
 }
 
 @media (min-width: 675px) {
