@@ -30,17 +30,31 @@ def binarySearch(arr, l, r, x):
 
 # Driver Code
 if __name__ == '__main__':
-	arr = [2, 3, 4, 10, 40]
-	x = 10
-	
-	# Function call
-	result = binarySearch(arr, 0, len(arr)-1, x)
-	
-	if result != -1:
-		print("Element is present at index", result)
-	else:
-		print("Element is not present in array")
+    
+#Enter the array to perform biinary search
+    try :
+        a=[]
+        n=int(input("Enter Number of elements in array in sorted order:"))
+        for i in range(0,n):
+           l=int(input())
+           a.append(l)
+        print(a)
+        
+        x=int(input("Enter a Number to search in array:"))
+        print(x)
+        
+        # Function call
+        result = binarySearch(a, 0, len(a)-1, x)
+        
+        if result != -1:
+        	print("Element is present at index", str(result))
+        else:
+        	print("Element is not present in array")
+    except:
+        print("Data is incomplete !!! please enter array and number to search completely  ")
+  
 
+	
 # Output:
 # Element is present at index 3
 
@@ -48,5 +62,7 @@ if __name__ == '__main__':
 # Best Case: O(1)
 # Average Case: O(log N)
 # Worst Case: O(log N)
+
+
 
 # Auxiliary Space: O(1), If the recursive call stack is considered then the auxiliary space will be O(logN).
