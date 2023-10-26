@@ -1,7 +1,6 @@
 package Programming.Contributershub.Java.Java;
 
 import java.util.Scanner;
-
 public class Fibbonaci_Series {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
