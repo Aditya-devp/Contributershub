@@ -18,8 +18,6 @@ public class Fibbonaci_Series {
                 num1 = num2;
                 num2 = nextTerm;
             }
-
-            scanner.close();
         }
     }
 
