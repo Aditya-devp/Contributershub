@@ -1,0 +1,65 @@
+body {
+    background: url("data:image/jpeg;base64,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");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+     padding:10px;
+  }
+  
+  
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+      width:75%;
+  
+  }
+  
+  .flex-blackjack-row-1,
+  .flex-blackjack-row-2,
+  .flex-blackjack-row-3 {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .flex-blackjack-row-2 div {
+    padding: 10px;
+    border: 1px solid black;
+  
+    flex: 1;
+    height: 350px;
+    text-align: center;
+  }
+  
+  .flex-blackjack-row-2 div img {
+    padding: 10px;
+  }
+  
+  table {
+      border: 3px solid black;
+      border-collapse: collapse;
+      padding:10px;
+      width:45%;
+      background-color: white;
+      text-align: center;
+  }
+  table td {
+      border: 2px solid black;
+  }
+  
+  .flex-blackjack-row-3 div {
+    padding: 5px;
+  }
+  
+  .flex-blackjack-row-3 button {
+    padding: 10 px;
+    margin-bottom: 10px;
+  }
+  
+  .flex-blackjack-row-2, .flex-blackjack-row-3{
+    background-image: url(https://i.stack.imgur.com/q02th.jpg);
+    border: 3px solid black;
+  }
