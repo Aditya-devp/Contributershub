@@ -1,9 +1,9 @@
 # Hacktoberfest 2023 Beginner-Friendly Repository
-
 Welcome to our Hacktoberfest 2023 Beginner-Friendly Repository! 🎉
 
 
 Are you eager to dive into the world of open source and contribute to meaningful projects? Look no further! This repository has been created with beginners in mind, offering a perfect opportunity to kickstart your open source journey.
+<h1>Kindly give us a "⭐️" if you find this repo useful.</h1>
 
 ## Why Contribute Here?
 
@@ -30,4 +30,8 @@ We have a Code of Conduct that all contributors are expected to follow. It ensur
 Let's make Hacktoberfest 2023 a memorable learning experience. Happy coding! 🚀
 
 **Note:** Please check the official Hacktoberfest website for guidelines and eligibility criteria. We are here to support you throughout your journey.
-<h1>Kindly give us a "⭐️" if you find this repo useful.
+
+<h1>Contributors</h1>
+<a href="https://github.com/Aditya-devp/Contributershub/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Aditya-devp/Contributershub" />
+</a>
