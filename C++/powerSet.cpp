@@ -8,7 +8,9 @@ The solution set must not contain duplicate subsets. Return the solution in any 
 #include<bits/stdc++.h>
 using namespace std;
 
+//temporary vector to store temp array.
 vector<int> temp;
+
 void solve(vector<int> nums, set<vector<int>> &table, int idx, int n)
 {
     if (idx == n)
