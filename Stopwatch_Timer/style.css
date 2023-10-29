@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #10101e;
+  }
+  .start-button {
+    background-color: #2e94e3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #1d6fa5;
+}
+  
+  .datetime {
+    color: #fff;
+    background: #10101e;
+    width: 370px;
+    padding: 15px 10px;
+    border: 3px solid #2e94e3;
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px
+      linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+  }
+  
+  .datetime:hover {
+    background-color: #2e94e3;
+    box-shadow: 0 0 30px #2e94e3;
+  }
+  
+  .date {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time span:not(:last-child) {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time span:last-child {
+    background: #2e94e3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 7px;
+    border-radius: 3px;
+  }
+.clock-color-hover {
+  background-color: #1d6fa5;
+  transition: background-color 0.5s ease;
+}
+
+.clock-color-glow {
+  background-color: #1d6fa5;
+  box-shadow: 0 0 10px #1d6fa5, 0 0 20px #1d6fa5, 0 0 30px #1d6fa5;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+  
