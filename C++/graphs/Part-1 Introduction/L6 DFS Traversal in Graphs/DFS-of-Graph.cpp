@@ -12,6 +12,9 @@ public:
             if(!vis[i]){
                 dfs(i, adj, ans, vis);
             }
+
+
+            
         }
     }
     
