@@ -1,0 +1,4 @@
+The Alchemist,Paulo Coelho,False
+Harry Potter,J.K. Rowling,False
+Rich Dad Poor Dad,Robert Kiyosaki,False
+To Kill a Mockingbird,Harper Lee,False
